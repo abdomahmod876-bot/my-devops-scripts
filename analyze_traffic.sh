@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Version: 1.1 - Updated via Git Lab
 # 1. Variables Initialization
 LOG_FILE="/var/log/nginx/odoo_access.log"
 
