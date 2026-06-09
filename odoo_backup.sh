@@ -3,7 +3,7 @@
 # ==========================================
 # ODOO AUTOMATED BACKUP & RETENTION SCRIPT
 # ==========================================
-
+# Checked and optimized for dev branch
 # 1. Variables Definition
 DB_NAME="abdo"
 BACKUP_DIR="/var/backups/odoo/daily"
