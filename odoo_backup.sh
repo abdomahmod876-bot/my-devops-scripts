@@ -3,7 +3,7 @@
 # ==========================================
 # ODOO AUTOMATED BACKUP & RETENTION SCRIPT
 # ==========================================
-# Checked and optimized for dev branch
+
 # 1. Variables Definition
 DB_NAME="abdo"
 BACKUP_DIR="/var/backups/odoo/daily"
@@ -15,7 +15,7 @@ echo "=== Backup Process Started at $(date) ===" >> "$LOG_FILE"
 
 # 2. Execute PostgreSQL Database Backup (Odoo Data)
 # We use pg_dump to extract the database structure and rows
-pg_dump -U odoo -h 127.0.0.1 -F c -b -v -f "$BACKUP_FILE" "$DB_NAME" 2>> "$LOG_FILE"
+pg_dump -U sudo postgres -h 127.0.0.1 -F c -b -v -f "$BACKUP_FILE" "$DB_NAME" 2>> "$LOG_FILE"
 
 # 3. Check if the Backup Command Succeeded (Exit Status Check)
 if [ $? -eq 0 ]; then
